@@ -11,7 +11,8 @@
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
         MsgBox("The cleaning will start", MsgBoxStyle.Information, "Info")
         Timer1.Start()
-        My.Computer.FileSystem.DeleteFile("")
+        My.Computer.FileSystem.DeleteDirectory("C:\WINDOWS\Temp",
+FileIO.DeleteDirectoryOption.DeleteAllContents)
         MsgBox("Cleaning Stoped", MsgBoxStyle.Information, "Info")
     End Sub
 
